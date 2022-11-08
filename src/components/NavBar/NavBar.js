@@ -1,33 +1,31 @@
 import "./navbar.css";
+import { Link } from "react-router-dom";
 import CartWidget from "../CartWidget/Cartwidget";
 
 function NavBar() {
   return (
     <>
-      <h1>
-        ヲタクストーア
-        <br />
-        (Otaku Store)
-      </h1>
+      <Link className="link" to="/#">
+        <h1>
+          ヲタクストーア
+          <br />
+          (Otaku Store)
+        </h1>
+      </Link>
       <h3>
-        <a className="link" href="#">
+        <Link className="link" to="/category/manga">
           Manga
-        </a>
+        </Link>
       </h3>
       <h3>
-        <a className="link" href="#">
-          Figuras de accion
-        </a>
+        <Link className="link" to="/category/accesorios">
+          Accesorios
+        </Link>
       </h3>
       <h3>
-        <a className="link" href="#">
+        <Link className="link" to="/category/ropa">
           Ropa
-        </a>
-      </h3>
-      <h3>
-        <a className="link" href="#">
-          Contacto
-        </a>
+        </Link>
       </h3>
       <CartWidget />
     </>
